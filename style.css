@@ -1,0 +1,322 @@
+/* 全局CSS样式 */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("./img/b.png");
+    background-size: cover;      /* 使图片覆盖整个窗口 */
+    background-attachment: fixed; /* 使背景图片固定不动 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 禁止图片重复 */ 
+    font-family: "Microsoft YaHei", sans-serif;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* 自定义整个滚动条 */
+::-webkit-scrollbar {
+    width: 0px; /* 滚动条的宽度 */
+}
+
+/* 将滚动条滑道移出视图 */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+
+/* 自定义滚动条滑块（thumb） */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* 滑块的颜色 */
+}
+
+/* 滑块在悬停状态下的样式 */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* 悬停时滑块的颜色 */
+}
+
+
+a {
+    color: #b3c377;
+    text-decoration: none;
+}
+
+/* 头部导航栏样式 */
+.header {
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 背景样式 */
+.hero {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-page {
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.548), rgba(209, 209, 209, 0));
+    border-bottom: 5px solid; 
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #b170c0, #ebbe6a); /* 页脚顶部添加渐变色边框 */
+}
+
+/* 主体内容区域样式 */
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 72px;
+    color: #fff; /* 标题为白色 */
+    margin-bottom: 30px;
+}
+
+#countdown {
+    font-size: 96px;
+    color: #ffffff;
+    background: linear-gradient(to right, #b170c0, #ebbe6a);
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#countdown span {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-left: 0px;
+    background: linear-gradient(to right, #b170c0, #ebbe6a);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer; /* 增加指针样式 */
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box; /* 确保padding不会超出按钮的宽高 */
+    position: relative;
+    overflow: hidden; /* 确保内容不超出按钮区域 */
+}
+
+
+/* 关于我们区域样式 */
+.about-us {
+    background-color: #fff;
+    color: #333;
+    padding: 50px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.514); /*元素阴影 X偏移 Y偏移 阴影模糊半径 阴影颜色*/
+}
+
+.about-us h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+
+/* 博客文章列表区域样式 */
+.blog {
+    background-color: #fff;
+    color: #333;
+    padding: 50px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.514); /*元素阴影 X偏移 Y偏移 阴影模糊半径 阴影颜色*/
+}
+
+.blog h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 10px; /* 圆角 */
+    overflow: hidden; /* 隐藏溢出的部分 */
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.blog-item img {
+    width: 100%;
+    height: 100%; /* 图片高度填满容器 */
+    object-fit: cover;
+}
+
+.blog-desc {
+    padding: 20px;
+    width: 60%;
+    text-align: left; /* 文字左对齐 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-desc h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left; /* 文字左对齐 */
+    margin-bottom: 10px;
+}
+
+.blog-desc .date {
+    font-size: 14px;
+    color: #666;
+    text-align: left; /* 文字左对齐 */
+    margin-bottom: 10px;
+}
+
+.blog-desc .excerpt {
+    font-size: 16px;
+    text-align: left; /* 文字左对齐 */
+    line-height: 24px;
+}
+
+/* 页脚样式 */
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 5px solid; 
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #b170c0, #ebbe6a); /* 页脚顶部添加渐变色边框 */
+}
+
+/* 文章封面样式 */
+.article-header {
+    position: relative;
+}
+
+.article-header img {
+    width: 100%;
+    height: auto;
+}
+
+.article-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+/* 容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 文章内容区域样式 */
+.article-content {
+    flex-basis: 70%;
+    margin-right: 30px;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    flex-basis: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #b3c377;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
